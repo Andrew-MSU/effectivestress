@@ -1,4 +1,5 @@
 Interactive Mohr Circle and Failure Envelope
+
 This Google Colab notebook provides an interactive visualization tool for understanding stress states using Mohr's Circle, specifically focusing on total and effective stresses, and the Coulomb failure envelope. It also dynamically visualizes physical orientations of potential fault planes based on the failure criteria.
 
 Features
@@ -13,14 +14,15 @@ Hydrofracture Detection: Automatically identifies and highlights conditions lead
 Unstable Orientations: Highlights portions of the effective stress circle that intersect the failure envelope, indicating planes prone to shear failure. It also calculates and displays the minimum and maximum dip angles for these unstable orientations.
 Physical Representation: A companion plot dynamically shows the physical orientation of the principal stresses and highlights unstable fault planes or tensile fractures in the rock block.
 Optimal Fault Plane: Draws the theoretically optimal fault plane for frictional sliding based on the Coulomb criterion.
+
 Getting Started
 Prerequisites
 This notebook is designed to run in Google Colab. The following Python libraries are required (and are typically pre-installed in Colab):
-
 matplotlib
 numpy
 ipywidgets
 IPython.display
+
 How to Use
 Open in Google Colab: Click the "Open in Colab" badge (if provided, or manually upload the .ipynb file to Colab).
 Run the Code Cell: Execute the main code cell containing the plot_mohr_and_physical function and the ipywidgets.interact call.
