@@ -1,30 +1,30 @@
-Interactive Mohr Circle and Failure Envelope
+# Interactive Mohr Circle and Failure Envelope
 
-This Google Colab notebook provides an interactive visualization tool for understanding stress states using Mohr's Circle, specifically focusing on total and effective stresses, and the Coulomb failure envelope. It also dynamically visualizes physical orientations of potential fault planes based on the failure criteria.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18775515.svg)](https://doi.org/10.5281/zenodo.18775515)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Andrew-MSU/effectivestress/blob/main/Mohr_Circle_Effective_Shear_Stress.ipynb)
 
-Features
-Interactive Sliders: Adjust key parameters in real-time:
-σ1 (Sigma 1): Maximum principal stress.
-σ3 (Sigma 3): Minimum principal stress.
-Pf (Pore Fluid Pressure): Fluid pressure within the rock.
-μ (Friction): Coefficient of internal friction for the failure envelope.
-Total and Effective Stress Circles: Displays both Mohr circles, illustrating the effect of pore fluid pressure on the stress state.
-Simplified Failure Envelope: Visualizes a linear Coulomb failure envelope based on the provided friction coefficient.
-Hydrofracture Detection: Automatically identifies and highlights conditions leading to hydrofracture (tensile failure).
-Unstable Orientations: Highlights portions of the effective stress circle that intersect the failure envelope, indicating planes prone to shear failure. It also calculates and displays the minimum and maximum dip angles for these unstable orientations.
-Physical Representation: A companion plot dynamically shows the physical orientation of the principal stresses and highlights unstable fault planes or tensile fractures in the rock block.
-Optimal Fault Plane: Draws the theoretically optimal fault plane for frictional sliding based on the Coulomb criterion.
+A Jupyter/Colab notebook (`Mohr_Circle_Effective_Shear_Stress.ipynb`) for exploring stress states with Mohr circles. It covers total versus effective stress and the Coulomb failure envelope, and shows the physical orientation of fault planes that could fail.
 
-Getting Started
-Prerequisites
-This notebook is designed to run in Google Colab. The following Python libraries are required (and are typically pre-installed in Colab):
-matplotlib
-numpy
-ipywidgets
-IPython.display
+## Features
 
-How to Use
-Open in Google Colab: Click the "Open in Colab" badge (if provided, or manually upload the .ipynb file to Colab).
-Run the Code Cell: Execute the main code cell containing the plot_mohr_and_physical function and the ipywidgets.interact call.
-Adjust Sliders: Once executed, interactive sliders will appear below the code cell. Drag these sliders to change the values of σ1, σ3, Pf, and μ.
-Observe Changes: The Mohr Circle and physical orientation plots will update in real-time, showing how changes in stress and pore pressure affect rock stability and potential failure modes.
+- **Interactive sliders** for σ1, σ3, pore-fluid pressure (Pf) and the friction coefficient (μ).
+- **Total and effective stress circles** that show how pore pressure shifts the stress state.
+- **A linear Coulomb failure envelope** based on μ.
+- **Hydrofracture detection**, which highlights conditions for tensile failure.
+- **Unstable orientations**, which marks where the effective circle crosses the envelope and reports the minimum and maximum dips of unstable planes.
+- **A physical block diagram** showing the principal stresses and any unstable faults or tensile fractures.
+- **The optimal fault plane** for frictional sliding under the Coulomb criterion.
+
+## How to use
+
+1. Open the notebook in Colab with the badge above. You can also run it locally with `matplotlib`, `numpy` and `ipywidgets` installed.
+2. Run the code cell that defines `plot_mohr_and_physical` and calls `ipywidgets.interact`.
+3. Move the sliders. Both plots update live.
+
+## Citation
+
+Laskowski, A. (2026). *Andrew-MSU/effectivestress: Effective Stress and the Mohr Circle Diagram* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18775515
+
+## License
+
+MIT (see `LICENSE`).
